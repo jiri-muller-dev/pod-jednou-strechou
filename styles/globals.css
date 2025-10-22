@@ -3,12 +3,12 @@
 @import 'tailwindcss';
 
 @theme {
-    --background-image-noise: linear-gradient(
+    /*--background-image-noise: linear-gradient(
             to bottom,
             color-mix(in oklab, var(--color-neutral-950) 0%, transparent),
-            color-mix(in oklab, var(--color-neutral-950) 100%, transparent)
+            color-mix(in oklab, var(--color-neutral-950) 20%, transparent)
         ),
-        url('/images/noise.png');
+        url('/images/noise.png');*/
     --color-primary: #2bdcd2;
     --color-primary-content: #171717;
     --color-secondary: #016968;
@@ -37,9 +37,17 @@
         @apply px-1 py-0.5 font-mono rounded bg-neutral-900 text-yellow-200;
         font-size: 0.9em;
     }
+
+    ul {
+        @apply list-disc list-inside;
+    }
 }
 
 @layer components {
+    .content {
+        @apply px-6 sm:px-12 max-w-5xl mx-auto w-full;
+    }
+
     .markdown {
         > * {
             @apply my-4;
